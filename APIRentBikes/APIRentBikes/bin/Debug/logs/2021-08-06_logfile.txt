@@ -1,0 +1,2 @@
+2021-08-06 22:44:46.7549 | ERROR | Bike with Id c071c09a-8291-4f88-bb1b-021ab8fca3b0 is not available
+2021-08-06 23:18:43.7878 | ERROR | Bike with Id 1c4a515a-56d1-43a8-8a80-39343fe2654f is not available

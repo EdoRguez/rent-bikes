@@ -1,0 +1,1 @@
+2021-08-04 14:28:12.0480 | ERROR | Bike not found

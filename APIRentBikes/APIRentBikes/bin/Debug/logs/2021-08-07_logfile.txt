@@ -1,0 +1,1 @@
+2021-08-07 19:30:33.3039 | ERROR | Bike with Id c8f84c17-23c2-4822-b611-80b05c945d17 is not available

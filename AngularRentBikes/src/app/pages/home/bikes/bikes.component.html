@@ -1,0 +1,7 @@
+<ul class="list-group text-center list-box">
+  <li *ngFor="let bike of listBikes" class="list-group-item">
+    <span *ngIf="bike.isAvailable" class="text-success pad-space">{{ 'Available' | padLeft:' ':12 }}</span>
+    <span *ngIf="!bike.isAvailable" class="text-danger pad-space">{{ 'Unavailable' }}</span>
+    <span> | {{ bike.serialNumber }}</span>
+  </li>
+</ul>

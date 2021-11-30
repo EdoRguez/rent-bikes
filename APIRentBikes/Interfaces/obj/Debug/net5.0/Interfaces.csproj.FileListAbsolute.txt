@@ -1,0 +1,14 @@
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Interfaces.deps.json
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Interfaces.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\ref\Interfaces.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Interfaces.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.AssemblyInfo.cs
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\ref\Interfaces.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Entities.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Entities.pdb

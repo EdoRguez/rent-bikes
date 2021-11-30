@@ -1,0 +1,86 @@
+<div mat-dialog-content>
+  <h6 class="text-center">Rent Bikes</h6>
+  <hr />
+  <form [formGroup]="form">
+    <mat-form-field class="w-100">
+      <mat-label>Bikes</mat-label>
+      <mat-select formControlName="listIdBikes" multiple>
+        <mat-option *ngFor="let bike of data.listBikes" [value]="bike.id">{{
+          bike.serialNumber
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls['listIdBikes'].invalid"
+        >* You should select at least 1 bike and no more than 5 to rent</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Rental Type</mat-label>
+      <mat-select formControlName="id_RentalType">
+        <mat-option
+          *ngFor="let rentalType of data.listRentalTypes"
+          [value]="rentalType.id"
+          >{{ rentalType.name }} - {{ rentalType.price }}$</mat-option
+        >
+      </mat-select>
+      <mat-error *ngIf="form.controls['id_RentalType'].invalid"
+        >* Rental type is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Rent Time</mat-label>
+      <input
+        formControlName="rentTime"
+        matInput
+        type="number"
+        min="1"
+        max="5"
+        maxlength="5"
+      />
+      <mat-error *ngIf="form.controls['rentTime'].invalid"
+        >* Rent time should be between 1 and 5</mat-error
+      >
+    </mat-form-field>
+  </form>
+  <hr />
+  <div>
+    <h6 class="text-center">Order</h6>
+    <p
+      *ngIf="
+        form.controls['listIdBikes'].value &&
+        form.controls['listIdBikes'].value.length >= 3
+      "
+    >
+      <span>Discount (30%): </span>
+      <b *ngIf="orderResult" class="text-success">{{ orderResult.discount }}$</b>
+    </p>
+    <p>
+      <span>Total: </span>
+      <span *ngIf="orderResult">
+        {{ this.orderResult.totalBikes }} (Bikes) *
+        {{ this.orderResult.rentalTypePrice }} (Rent Price) *
+        {{ this.orderResult.rentTime }} =
+        <b class="text-success">{{ orderResult.total }}$</b>
+      </span>
+    </p>
+    <p
+      *ngIf="
+        form.controls['listIdBikes'].value &&
+        form.controls['listIdBikes'].value.length >= 3
+      "
+    >
+      <span>Total With Discount: </span>
+      <b *ngIf="orderResult" class="text-success">{{ orderResult.totalWithDiscount }}$</b>
+    </p>
+    <hr />
+  </div>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-between">
+  <button mat-button (click)="onCancelForm()" class="btn btn-danger">
+    Cancel
+  </button>
+  <button mat-button (click)="onSaveForm()" class="btn btn-success" [disabled]="form.invalid">
+    Rent
+  </button>
+</div>

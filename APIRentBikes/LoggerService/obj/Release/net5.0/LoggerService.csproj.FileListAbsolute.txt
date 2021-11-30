@@ -1,0 +1,17 @@
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\LoggerService.deps.json
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\LoggerService.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\ref\LoggerService.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\LoggerService.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\Entities.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\Interfaces.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\Interfaces.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\bin\Release\net5.0\Entities.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.AssemblyInfo.cs
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.csproj.CopyComplete
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\ref\LoggerService.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\LoggerService\obj\Release\net5.0\LoggerService.pdb
