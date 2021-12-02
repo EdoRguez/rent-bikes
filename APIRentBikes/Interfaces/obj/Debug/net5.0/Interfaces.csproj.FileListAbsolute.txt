@@ -12,3 +12,4 @@ C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.pdb
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Entities.dll
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\bin\Debug\net5.0\Entities.pdb
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\Interfaces\obj\Debug\net5.0\Interfaces.csproj.CopyComplete

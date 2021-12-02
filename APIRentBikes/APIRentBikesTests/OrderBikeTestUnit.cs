@@ -1,8 +1,17 @@
-﻿using APIRentBikes.Utils;
+﻿using APIRentBikes;
+using APIRentBikes.Controllers;
+using APIRentBikes.Utils;
 using APIRentBikesTests.Config;
 using APIRentBikesTests.FakeData;
+using AutoMapper;
+using Entities;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Entities.RequestFeatures;
+using Interfaces;
+using LoggerService;
+using Microsoft.AspNetCore.Mvc;
+using Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,64 +23,52 @@ namespace APIRentBikesTests
 {
     public class OrderBikeTestUnit
     {
-        [Fact]
-        public void Test1()
+        private readonly ApplicationDbContext _context;
+        private readonly IRepositoryManager _repo;
+
+        private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
+
+        public OrderBikeTestUnit()
         {
-            var _dbc = DbContextInMemory.Get();
+            var config = new MapperConfiguration(x => {
+                x.AddProfile<MappingProfile>();
+            });
 
-            // We create list of rental types
-            List<RentalType> rentalTypes = Data.GetRentalTypes();
-            _dbc.Set<RentalType>().AddRange(rentalTypes);
+            _mapper = config.CreateMapper();
+            _logger = new LoggerManager();
 
-            // We create list of bikes
-            List<Bike> bikes = Data.GetBikes();
-            _dbc.Set<Bike>().AddRange(bikes);
+            _context = DbContextInMemory.Get();
 
-            _dbc.SaveChanges();
+            _repo = new RepositoryManager(_context);
+        }
 
-            // We create object to rent bikes
-            OrderBikeCreateDto orderBikeCreateDto = new OrderBikeCreateDto()
+        [Fact]
+        public async void Add_ValidObjectPassed_ReturnsCreatedResponse()
+        {
+            // Arrange
+            _context.AddRange(Data.GetRentalTypes());
+            _context.AddRange(Data.GetBikes());
+            _context.SaveChanges();
+
+            var controller = new OrderBikeController(_repo, _logger, _mapper);
+
+            OrderBikeCreateDto dto = new OrderBikeCreateDto()
             {
-                ListIdBikes = new List<Guid?>()
+                ListIdBikes =  new List<Guid?>()
                 {
-                    Guid.Parse("6fe98c41-f2fe-4d45-860e-3042dd182751"),
-                    Guid.Parse("1c4a515a-56d1-43a8-8a80-39343fe2654f")
+                    Guid.Parse("C8F84C17-23C2-4822-B611-80B05C945D17"),
+                    Guid.Parse("B8CB8AA8-97E3-4049-B31D-8CD5D15503E8")
                 },
-                Id_RentalType = Guid.Parse("b090a296-d3a3-4828-b2f9-0b6c360ad77b"),
-                RentTime = 5
+                Id_RentalType = Guid.Parse("3CDB0CE0-6C5E-4C2D-9252-54ED5683B854"),
+                RentTime = 4
             };
 
-            // We validate if rental type exist
-            var dbRentalType = _dbc.Set<RentalType>().FirstOrDefault(x => x.Id == orderBikeCreateDto.Id_RentalType);
-            Assert.NotNull(dbRentalType);
+            // Act
+            var createdResponse = await controller.Create(dto);
 
-            // We validate if all bikes exist
-            var dbBikes = _dbc.Set<Bike>().Where(x => orderBikeCreateDto.ListIdBikes.Contains(x.Id));
-            Assert.Equal(dbBikes.Count(), orderBikeCreateDto.ListIdBikes.Count());
-
-            // We create the new order
-            Order order = OrderBikeUtils.ManageOrderData(dbRentalType, bikes.Count(), (int)orderBikeCreateDto.RentTime);
-            order.Id = Guid.NewGuid();
-            _dbc.Set<Order>().Add(order);
-
-
-            foreach (Bike forBike in dbBikes)
-            {
-                OrderBike orderBike = new OrderBike()
-                {
-                    Order = order,
-                    Bike = forBike
-                };
-
-                _dbc.Set<OrderBike>().Add(orderBike);
-            }
-
-            _dbc.SaveChanges();
-
-            // We validate all models were created
-            var orderBikes = _dbc.Set<OrderBike>().Where(x => x.Id_Order == order.Id);
-
-            Assert.Equal(orderBikeCreateDto.ListIdBikes.Count(), orderBikes.Count());
+            // Assert
+            Assert.IsType<ObjectResult>(createdResponse);
         }
     }
 }

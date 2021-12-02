@@ -158,3 +158,5 @@ C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\obj\Debu
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\obj\Debug\net5.0\ref\APIRentBikesTests.dll
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\obj\Debug\net5.0\APIRentBikesTests.pdb
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\obj\Debug\net5.0\APIRentBikesTests.genruntimeconfig.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikesTests\bin\Debug\net5.0\Moq.dll

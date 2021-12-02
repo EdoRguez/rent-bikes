@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using APIRentBikesTests.FakeData;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ namespace APIRentBikesTests.Config
     {
         public static ApplicationDbContext Get()
         {
-
             return new ApplicationDbContext(new DbContextOptionsBuilder<ApplicationDbContext>().UseInMemoryDatabase($"RentBikesTests.Db").Options);
         }
     }

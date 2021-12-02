@@ -68,11 +68,11 @@ C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\n
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\staticwebassets\APIRentBikes.StaticWebAssets.Manifest.cache
-C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\staticwebassets\APIRentBikes.StaticWebAssets.xml
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\scopedcss\bundle\APIRentBikes.styles.css
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.RazorTargetAssemblyInfo.cache
-C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.csproj.CopyComplete
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.dll
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\ref\APIRentBikes.dll
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.pdb
 C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.genruntimeconfig.cache
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\bin\Release\net5.0\APIRentBikes.StaticWebAssets.xml
+C:\Users\PC\Documents\Projects\RentBikes\APIRentBikes\APIRentBikes\obj\Release\net5.0\APIRentBikes.csproj.CopyComplete

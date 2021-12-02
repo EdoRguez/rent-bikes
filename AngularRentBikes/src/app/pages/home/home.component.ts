@@ -11,6 +11,7 @@ import { RentalTypeService } from '../shared/services/rental-type.service';
 import { UtilsService } from '../shared/services/utils.service';
 import { OrderBikesDialogComponent } from './order-bikes-dialog/order-bikes-dialog.component';
 import { OrderBikesTable } from './order-bikes-table/order-bikes-table.interface';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-home',
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
               private orderBikeService: OrderBikeService,
               private utilsService: UtilsService,
               private mainLoaderService: MainLoaderService,
+              private _snackBar: MatSnackBar,
               public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -51,17 +53,29 @@ export class HomeComponent implements OnInit {
       )
     ]).subscribe(
       (res: any[]) => {
-        this.bikes = res[0];
-        this.rentalTypes = res[1].sort((n1: RentalType, n2: RentalType)=> n1.price > n2.price);
-        this.orderBikesTable = this.utilsService.convertOrderBikesToTable(res[2]);        
+        if(res.some(x => x.error)) {
+          this.openSnackBarError('There is an error retrieving data from server, probably server is not running or bad configured', 100000);          
+        } else {
+          this.bikes = res[0];
+          this.rentalTypes = res[1].sort((n1: RentalType, n2: RentalType)=> n1.price > n2.price);
+          this.orderBikesTable = this.utilsService.convertOrderBikesToTable(res[2]);        
+  
+          this.isPageLoading = false;
+        }
 
-        this.isPageLoading = false;
+
       }
     );
   }
   
   onRentBike(): void {
     this.openDialog();
+  }
+
+  private openSnackBarError(messageError: string, millisecondsDuration: number): void {
+    this._snackBar.open(messageError, '', {
+      duration: millisecondsDuration
+    });
   }
 
   private openDialog(orderBike?: OrderBike): void {
